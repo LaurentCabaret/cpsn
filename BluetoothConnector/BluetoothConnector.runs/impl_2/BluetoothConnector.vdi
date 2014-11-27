@@ -1,13 +1,12 @@
-
-*** Running vivado
-    with args -log BluetoothConnector.vdi -applog -m64 -messageDb vivado.pb -mode batch -source BluetoothConnector.tcl -notrace
-
-
-****** Vivado v2014.2 (64-bit)
-  **** SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
-  **** IP Build 924643 on Fri May 30 09:20:16 MDT 2014
-    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Thu Nov 27 12:06:00 2014
+# Process ID: 3472
+# Log file: C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.runs/impl_2/BluetoothConnector.vdi
+# Journal file: C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.runs/impl_2\vivado.jou
+#-----------------------------------------------------------
 source BluetoothConnector.tcl -notrace
 CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
 CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
@@ -45,16 +44,15 @@ INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.268 . Memory (MB): peak = 450.215 ; gain = 0.789
-
-*** Running vivado
-    with args -log BluetoothConnector.vdi -applog -m64 -messageDb vivado.pb -mode batch -source BluetoothConnector.tcl -notrace
-
-
-****** Vivado v2014.2 (64-bit)
-  **** SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
-  **** IP Build 924643 on Fri May 30 09:20:16 MDT 2014
-    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Thu Nov 27 12:07:49 2014
+# Process ID: 4436
+# Log file: C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.runs/impl_2/BluetoothConnector.vdi
+# Journal file: C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.runs/impl_2\vivado.jou
+#-----------------------------------------------------------
 source BluetoothConnector.tcl -notrace
 CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
 CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
@@ -96,7 +94,6 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 Phase 1 Retarget | Checksum: 14a384298

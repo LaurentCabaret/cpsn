@@ -1,0 +1,21 @@
+Design Route Status
+                                               :      # nets :
+   ------------------------------------------- : ----------- :
+   # of logical nets.......................... :        1320 :
+       # of nets not needing routing.......... :         627 :
+           # of internally routed nets........ :         627 :
+       # of routable nets..................... :         693 :
+           # of fully routed nets............. :         691 :
+       # of nets with routing errors.......... :           2 :
+           # of nets with some unrouted pins.. :           1 :
+           # of nets with resource conflicts.. :           2 :
+   ------------------------------------------- : ----------- :
+
+
+Nets with Routing Errors:
+  GLOBAL_LOGIC0
+    Conflicts with Site Pins: CLBLM_L_X60Y30/CLBLM_M_AX
+  RxConnector/ClkGen/n_0_CLKOUT_reg_i_95
+    Unrouted Pin: RxConnector/ClkGen/CLKOUT_reg_i_613/CYINIT
+    Conflicts with Site Pins: CLBLM_L_X60Y30/CLBLM_M_AX
+

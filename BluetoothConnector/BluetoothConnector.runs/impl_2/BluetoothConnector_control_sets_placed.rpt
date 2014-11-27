@@ -1,0 +1,56 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
+| Date         : Thu Nov 27 12:08:34 2014
+| Host         : Mia running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file BluetoothConnector_control_sets_placed.rpt
+| Design       : BluetoothConnector
+| Device       : xc7z020
+-----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |     3 |
+| Minimum Number of register sites lost to control set restrictions |    12 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              20 |            6 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              32 |            8 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+---------------+---------------------------------------+------------------+----------------+
+|          Clock Signal         | Enable Signal |            Set/Reset Signal           | Slice Load Count | Bel Load Count |
++-------------------------------+---------------+---------------------------------------+------------------+----------------+
+|  RxConnector/RxGenerator/Done |               |                                       |                1 |              2 |
+|  Clk_IBUF_BUFG                |               |                                       |                5 |             18 |
+|  Clk_IBUF_BUFG                |               | RxConnector/ClkGen/n_0_counter[0]_i_1 |                8 |             32 |
++-------------------------------+---------------+---------------------------------------+------------------+----------------+
+
+

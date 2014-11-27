@@ -3,9 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity BluetoothConnector is
     PORT ( 
-        Rx : in STD_LOGIC;
-        Clk : in STD_LOGIC;
-        LEDS : out STD_LOGIC_VECTOR (7 downto 0)
+        Rx      : in STD_LOGIC;
+        Clk     : in STD_LOGIC;
+        LEDS    : out STD_LOGIC_VECTOR (7 downto 0)
     );
 end BluetoothConnector;
 
@@ -16,14 +16,12 @@ COMPONENT RxSystem
        Rx :        in STD_LOGIC;
        Clk :       in STD_LOGIC;
        Data :      out STD_LOGIC_VECTOR (7 downto 0);
-       DataRdy :   out STD_LOGIC;
-       BdClk :     out STD_LOGIC
+       DataRdy :   out STD_LOGIC
    );
 END COMPONENT;
 
 SIGNAL Data : STD_LOGIC_VECTOR (7 downto 0);
 SIGNAL DataRdy : STD_LOGIC := '1';
-SIGNAL BdClk : STD_LOGIC := '0';
 
 begin
 
@@ -31,8 +29,7 @@ RxConnector : RxSystem PORT MAP (
     Rx         => Rx,
     Clk        => Clk,
     Data       => Data,
-    DataRdy    => DataRdy,
-    BdClk      => BdClk
+    DataRdy    => DataRdy
 );
 
 process(DataRdy)

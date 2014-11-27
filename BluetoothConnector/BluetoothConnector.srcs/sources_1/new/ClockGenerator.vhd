@@ -11,8 +11,8 @@ entity ClockGenerator is
 end ClockGenerator;
 
 architecture Behavioral of ClockGenerator is
-    CONSTANT MAINFREQ : integer := 100000000;
-    signal counter : integer :=0;
+    constant MAINFREQ : integer := 100000000;
+    signal counter : integer := 0;
     
     begin
         process ( MAINCLK , TRIGGER )

@@ -20,7 +20,7 @@ TYPE STATE_TYPE IS (
 );
 
 signal state    : STATE_TYPE := Idle;
-signal RxClked  : STD_LOGIC ;
+signal RxClked  : STD_LOGIC := '1';
 
 begin
     FSMTransition : process ( Clk )

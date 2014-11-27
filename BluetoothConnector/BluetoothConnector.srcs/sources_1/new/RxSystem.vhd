@@ -6,8 +6,7 @@ entity RxSystem is
         Rx :        in STD_LOGIC;
         Clk :       in STD_LOGIC;
         Data :      out STD_LOGIC_VECTOR (7 downto 0);
-        DataRdy :   out STD_LOGIC;
-        BdClk :     out STD_LOGIC
+        DataRdy :   out STD_LOGIC
     );
 end RxSystem;
 
@@ -17,7 +16,7 @@ COMPONENT ClockGenerator
     PORT (
         MAINCLK :   in STD_LOGIC;
         TRIGGER :   in STD_LOGIC;
-        BAUDRATE : in INTEGER;
+        BAUDRATE :  in INTEGER;
         CLKOUT :    out STD_LOGIC
     );
 END COMPONENT;
@@ -36,12 +35,10 @@ END COMPONENT;
 
 signal ClkMod   : INTEGER := 2;
 signal BaudRate : INTEGER := 115200;
-signal BdClkEn  : STD_LOGIC;
-signal BdClkO   : STD_LOGIC;
+signal BdClkEn  : STD_LOGIC := '1';
+signal BdClkO   : STD_LOGIC := '0';
 
 begin
-    BdClk <= BdClkO;
-    
     with ClkMod select BaudRate <=
         115200 when 0 ,
         230400 when 1 ,
