@@ -1,0 +1,347 @@
+
+*** Running vivado
+    with args -log BluetoothConnector.vds -m64 -mode batch -messageDb vivado.pb -source BluetoothConnector.tcl
+
+
+****** Vivado v2014.2 (64-bit)
+  **** SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+  **** IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source BluetoothConnector.tcl
+# set_param gui.test TreeTableDev
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7z020clg484-1
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/0.9/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - C:/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/1.0/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+# set_property target_language VHDL [current_project]
+# set_property board_part em.avnet.com:zed:part0:1.0 [current_project]
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_property default_lib xil_defaultlib [current_project]
+# read_vhdl -library xil_defaultlib {
+#   C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/RxFSM.vhd
+#   C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/ClockGenerator.vhd
+#   C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/RxSystem.vhd
+#   C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/BluetoothConnector.vhd
+# }
+# read_xdc C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/constrs_1/new/BluetoothController_constraints.xdc
+# set_property used_in_implementation false [get_files C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/constrs_1/new/BluetoothController_constraints.xdc]
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.cache/wt [current_project]
+# set_property parent.project_dir C:/Users/Gabriel/projets/cpsn/BluetoothConnector [current_project]
+# catch { write_hwdef -file BluetoothConnector.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top BluetoothConnector -part xc7z020clg484-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+Command: synth_design -top BluetoothConnector -part xc7z020clg484-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+
+Starting synthesis...
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 222.129 ; gain = 92.500
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'BluetoothConnector' [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/BluetoothConnector.vhd:12]
+INFO: [Synth 8-3491] module 'RxSystem' declared at 'C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/RxSystem.vhd:4' bound to instance 'RxConnector' of component 'RxSystem' [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/BluetoothConnector.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'RxSystem' [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/RxSystem.vhd:14]
+INFO: [Synth 8-3491] module 'ClockGenerator' declared at 'C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/ClockGenerator.vhd:4' bound to instance 'ClkGen' of component 'ClockGenerator' [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/RxSystem.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'ClockGenerator' [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/ClockGenerator.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'ClockGenerator' (1#1) [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/ClockGenerator.vhd:13]
+INFO: [Synth 8-3491] module 'RxFSM' declared at 'C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/RxFSM.vhd:4' bound to instance 'RxGenerator' of component 'RxFSM' [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/RxSystem.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'RxFSM' [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/RxFSM.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'RxFSM' (2#1) [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/RxFSM.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'RxSystem' (3#1) [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/RxSystem.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'BluetoothConnector' (4#1) [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/sources_1/new/BluetoothConnector.vhd:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 255.996 ; gain = 126.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+Loading clock regions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/zynq/zynq/xc7z020/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/zynq/zynq/xc7z020/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.2/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/zynq/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.2/data\parts/xilinx/zynq/zynq/xc7z020/clg484/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.2/data\./parts/xilinx/zynq/IOStandards.xml
+
+Processing XDC Constraints
+Parsing XDC File [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/constrs_1/new/BluetoothController_constraints.xdc]
+Finished Parsing XDC File [C:/Users/Gabriel/projets/cpsn/BluetoothConnector/BluetoothConnector.srcs/constrs_1/new/BluetoothController_constraints.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+---------------------------------------------------------------------------------
+Start RTL Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 471.906 ; gain = 342.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 471.906 ; gain = 342.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 471.906 ; gain = 342.277
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   4 Input     19 Bit        Muxes := 1     
+	  14 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 2     
+	  14 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module BluetoothConnector 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module ClockGenerator 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module RxFSM 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  14 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 2     
+	  14 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 2     
+Module RxSystem 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 1     
+	   4 Input     19 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 476.930 ; gain = 347.301
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 476.930 ; gain = 347.301
+---------------------------------------------------------------------------------
+Finished Parallel Reinfer  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 476.930 ; gain = 347.301
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\LEDS_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (\LEDS_reg[7] ) is unused and will be removed from module BluetoothConnector.
+WARNING: [Synth 8-3332] Sequential element (\LEDS_reg[6] ) is unused and will be removed from module BluetoothConnector.
+WARNING: [Synth 8-3332] Sequential element (\LEDS_reg[5] ) is unused and will be removed from module BluetoothConnector.
+WARNING: [Synth 8-3332] Sequential element (\LEDS_reg[4] ) is unused and will be removed from module BluetoothConnector.
+WARNING: [Synth 8-3332] Sequential element (\LEDS_reg[3] ) is unused and will be removed from module BluetoothConnector.
+WARNING: [Synth 8-3332] Sequential element (\LEDS_reg[2] ) is unused and will be removed from module BluetoothConnector.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 496.824 ; gain = 367.195
+---------------------------------------------------------------------------------
+Finished Parallel Area Opt  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 496.824 ; gain = 367.195
+Finished Parallel Section  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 496.824 ; gain = 367.195
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 552.938 ; gain = 423.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 552.938 ; gain = 423.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 566.309 ; gain = 436.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[31] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[30] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[29] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[28] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[27] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[26] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[25] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[24] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[23] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[22] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[21] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[20] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[19] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[18] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin ClkGen:BAUDRATE[0] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 566.309 ; gain = 436.680
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 566.309 ; gain = 436.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   155|
+|3     |LUT1   |    48|
+|4     |LUT2   |   383|
+|5     |LUT3   |   150|
+|6     |LUT4   |    31|
+|7     |LUT5   |     4|
+|8     |LUT6   |    10|
+|9     |FDRE   |    52|
+|10    |IBUF   |     2|
+|11    |OBUF   |     8|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------+---------------+------+
+|      |Instance        |Module         |Cells |
++------+----------------+---------------+------+
+|1     |top             |               |   844|
+|2     |  RxConnector   |RxSystem       |   828|
+|3     |    ClkGen      |ClockGenerator |   791|
+|4     |    RxGenerator |RxFSM          |    34|
++------+----------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 566.309 ; gain = 436.680
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 566.309 ; gain = 436.680
+INFO: [Netlist 29-17] Analyzing 157 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 568.941 ; gain = 396.988
+# write_checkpoint BluetoothConnector.dcp
+# report_utilization -file BluetoothConnector_utilization_synth.rpt -pb BluetoothConnector_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 568.941 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 27 10:48:29 2014...
